@@ -32,4 +32,35 @@ class DaftarPesanan:
             print("Daftar Pesanan masih Kosong")
             return
 
-            
+       pesanan = self.head
+        while pesanan:
+            print(f"{pesanan.nama_menu}: {pesanan.harga}: {pesanan.jumlah}: - {pesanan.harga*pesanan.jumlah}: rupiah")
+            pesanan = pesanan.next
+    
+    def total_pesanan(self):
+        total = 0
+        
+        pesanan = self.head
+        while pesanan:
+            total += pesanan.harga * pesanan.jumlah
+            pesanan = pesanan.next
+        
+        print(f"Total Harga Pesanan: Rp{total}")
+
+daftar_pesanan = DaftarPesanan()
+
+# menu dan harga 
+MENU = [
+    ["Mixue Ice Cream", 5_000], 
+    ["Mi Sundae", 14_000], 
+    ["Boba Shake", 16_000], 
+    ["Mi ganas", 11_000], 
+    ["Creamy Manggo Boba", 22_000]
+    ]
+
+
+print(
+"""
+1. Mixue Ice Cream: 5000
+2. Mi Sundae:14000
+3. Boba Shake:16000
