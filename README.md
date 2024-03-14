@@ -64,3 +64,28 @@ print(
 1. Mixue Ice Cream: 5000
 2. Mi Sundae:14000
 3. Boba Shake:16000
+4. 4. Mi ganas:11000
+5. Creamy Manggo Boba:22000
+""")
+pesanan = int(input("Silahkan memesan dari menu (input nomer): "))
+jumlah = int(input("Berapa banyak yang di inginkan (input angka): "))
+daftar_pesanan.tambahkan_pesanan(MENU[pesanan - 1][0], MENU[pesanan - 1][1],jumlah)
+
+
+while True:
+    pesanan = input("Apakah ada pesanan lagi? (jika tidak, maka ketik 'exit'): ")
+    if pesanan == "exit":
+        break
+
+    pesanan = int(pesanan)
+    jumlah = int(input("Berapa banyak yang di inginkan (input angka): "))
+    daftar_pesanan.tambahkan_pesanan(MENU[pesanan - 1][0], MENU[pesanan - 1][1],jumlah)
+
+# daftar_pesanan.tambahkan_pesanan("Mixue", 5_000)
+# daftar_pesanan.tambahkan_pesanan("Mi Sundae", 14_000)
+# daftar_pesanan.tambahkan_pesanan("Boba Shake", 16_000)
+# daftar_pesanan.tambahkan_pesanan("Mi ganas", 11_000)
+# daftar_pesanan.tambahkan_pesanan("Creamy Manggo Boba", 22_000)
+
+daftar_pesanan.print()
+daftar_pesanan.total_pesanan()
