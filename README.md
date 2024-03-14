@@ -56,7 +56,7 @@ MENU = [
     ["Boba Shake", 16_000], 
     ["Mi ganas", 11_000], 
     ["Creamy Manggo Boba", 22_000]
-    ]
+    ] 
 
 
 print(
